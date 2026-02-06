@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Caltack Urbanizadora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preload" as="image" href="assets/images/banner-hero.jpg" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Caltack</h1>
+
+        <nav class="nav">
+          <a href="#empreendimentos">Empreendimentos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/5554992361064?text=Olá,%20tenho%20interesse%20nos%20empreendimentos%20da%20Caltack%20Urbanizadora."
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </header>
+    <!-- =========================
+       HERO
+  ========================== -->
+
+    <section class="hero">
+      <img
+        src="assets/images/banner-hero.jpg"
+        alt="Caltack Urbanizadora"
+        class="hero-img"
+        loading="eager"
+      />
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h2 class="hero-title">Viva bem seu sonho.</h2>
+      </div>
+    </section>
+
+    <!-- =========================
+     EMPREENDIMENTOS
+========================== -->
+    <section id="empreendimentos" class="empreendimentos">
+      <div class="container">
+        <h2 class="section-title">Empreendimentos em destaque</h2>
+
+        <div class="cards-container">
+          <!-- Card 1 -->
+          <a href="pages/vista-norte.html" class="card-lg">
+            <img
+              loading="lazy"
+              src="assets/images/residencial-vista-norte.jpg"
+              alt="Residencial Vista Norte"
+            />
+            <h3>Residencial Vista Norte</h3>
+            <p>Passo Fundo – RS</p>
+            <span class="btn-card">Ver detalhes</span>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="pages/jardim-primavera.html" class="card-lg">
+            <img
+              loading="lazy"
+              src="assets/images/jardim-primavera.jpg"
+              alt="Jardim Primavera"
+            />
+            <h3>Jardim Primavera</h3>
+            <p>Marau – RS</p>
+            <span class="btn-card">Ver detalhes</span>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="pages/parque-do-lago.html" class="card-lg">
+            <img
+              loading="lazy"
+              src="assets/images/parque-do-lago.jpg"
+              alt="Parque do Lago"
+            />
+
+            <h3>Parque do Lago</h3>
+            <p>Chapecó – SC</p>
+            <span class="btn-card">Ver detalhes</span>
+          </a>
+
+          <!-- Card 4 (O novo que completa sua ideia) -->
+          <a href="pages/caltack-central.html" class="card-lg">
+            <img
+              loading="lazy"
+              src="assets/images/novo-lancamento.jpg"
+              alt="Novo Empreendimento"
+            />
+            <h3>Residencial Caltack Central</h3>
+            <p>Erechim – RS</p>
+            <span class="btn-card">Ver detalhes</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     SOBRE
+========================== -->
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <h2 class="section-title">Mais de 10 anos urbanizando sonhos</h2>
+
+        <p class="sobre-text">
+          A Caltack Urbanizadora desenvolve loteamentos planejados com
+          infraestrutura completa e alto potencial de valorização.
+        </p>
+
+        <div class="numeros">
+          <div class="numero-box">
+            <h3>+20</h3>
+            <p>Empreendimentos entregues</p>
+          </div>
+
+          <div class="numero-box">
+            <h3>RS & SC</h3>
+            <p>Atuação regional</p>
+          </div>
+
+          <div class="numero-box">
+            <h3>100%</h3>
+            <p>Infraestrutura planejada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================
+     CONTATO
+========================== -->
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2 class="section-title">Fale com um consultor agora</h2>
+
+        <p class="contato-text">
+          Tire suas dúvidas e encontre o loteamento ideal para você.
+        </p>
+
+        <a
+          class="btn-whatsapp-grande"
+          href="https://wa.me/5554992361064?text=Olá,%20quero%20falar%20com%20um%20consultor%20da%20Caltack%20Urbanizadora."
+          target="_blank"
+        >
+          🟢 Falar no WhatsApp
+        </a>
+
+        <form class="form-contato" id="formContato">
+          <input
+            type="text"
+            id="nome"
+            placeholder="Seu nome"
+            required
+            autocomplete="name"
+          />
+
+          <input
+            type="tel"
+            id="telefone"
+            placeholder="Seu telefone (DDD + número)"
+            required
+            inputmode="tel"
+            autocomplete="tel"
+          />
+
+          <textarea
+            id="mensagem"
+            placeholder="Como podemos ajudar você?"
+            rows="4"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <footer class="footer">
+          <div class="container">
+            <p>Caltack Urbanizadora © 2026</p>
+
+            <div class="footer-links">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-btn"
+              >
+                <img src="assets/icons/instagram.png" alt="Instagram" />
+                Instagram
+              </a>
+
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="social-btn"
+              >
+                <img src="assets/icons/facebook.png" alt="Facebook" />
+                Facebook
+              </a>
+            </div>
+
+            <p>Marau – RS</p>
+          </div>
+        </footer>
+      </div>
+    </footer>
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a
+      href="https://wa.me/5554992361064?text=Olá,%20tenho%20interesse%20nos%20empreendimentos%20da%20Caltack%20Urbanizadora."
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <img src="assets/icons/whatsapp-icon.png" alt="WhatsApp" />
+    </a>
+    <script src="js/script.js"></script>
+  </body>
+</html>
