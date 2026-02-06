@@ -1,0 +1,471 @@
+/* =========================================
+   RESET + BASE (MOBILE FIRST)
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 2px solid #e2e2e2;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  color: #1a4731;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: none;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* =========================================
+   HERO HOME
+========================================= */
+ .hero {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* imagem real */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* camada escura */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* texto */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* =========================================
+   HERO EMPREENDIMENTOS (PÁGINAS INTERNAS)
+========================================= */
+.empreendimento-hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.empreendimento-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.empreendimento-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Imagem Vista Norte */
+.vista-norte {
+  background-image: url("../assets/images/ap-residencia-vista-norte.jpg");
+}
+
+/* =========================================
+   EMPREENDIMENTOS (CARDS)
+========================================= */
+.empreendimentos {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 45px;
+  color: #1a4731;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+/* Card premium */
+.card-lg {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 0.8s ease forwards;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-lg:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card-lg:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.card-lg:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.card-lg:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-lg:active {
+  transform: scale(0.98);
+}
+
+.card-lg img {
+  height: 210px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-lg h3 {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 15px 15px 5px;
+}
+
+.card-lg p {
+  font-size: 14px;
+  color: #666;
+  padding: 0 15px 10px;
+}
+
+.btn-card {
+  display: block;
+  margin: 15px;
+  padding: 14px;
+  border-radius: 12px;
+
+  background: #1a4731;
+  color: white;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+/* =========================================
+   SOBRE (HOME E PÁGINAS)
+========================================= */
+.sobre {
+  padding: 70px 0;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.sobre-text {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 20px auto 40px;
+  color: #555;
+}
+
+.numeros {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.numero-box h3 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #c4a47c;
+}
+
+.numero-box p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* =========================================
+   CONTATO
+========================================= */
+.contato {
+  background: #eee;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.btn-whatsapp-grande {
+  display: block;
+  background: #25d366;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 25px auto;
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.form-contato {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-contato button {
+  width: 100%;
+  padding: 15px;
+  background: #1a4731;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================================
+   WHATSAPP FLUTUANTE
+========================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #25d366;
+  border-radius: 50%;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 99999;
+
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   RESPONSIVO DESKTOP
+========================================= */
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+
+  .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .numeros {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .card-lg:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+@media (prefers-reduced-motion: reduce) {
+  .card-lg {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .whatsapp-float {
+    animation: none;
+  }
+}
+
+.jardim-primavera {
+  background-image: url("../assets/images/jardim-primavera.jpg");
+}
+
+.parque-do-lago {
+  background-image: url("../assets/images/parque-do-lago.jpg");
+}
+
+.caltack-central {
+  background-image: url("../assets/images/novo-lancamento.jpg");
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer-links {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: #1a4731;
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 18px;
+  border-radius: 12px;
+
+  font-weight: bold;
+  width: 200px;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn:active {
+  transform: scale(0.96);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .footer-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .social-btn {
+    width: auto;
+  }
+}
